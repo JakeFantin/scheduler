@@ -1,5 +1,5 @@
 // TEST FILE FOR REDUCER THAT ALLOWS US TO UNIT TEST THE DEFAULT BEHAVIOUR OF OUR REDUCER
-import reducer, {SET_DAY, SET_APPLICATION_DATA, SET_INTERVIEW} from 'reducers/application';
+import reducer, { SET_DAY, SET_APPLICATION_DATA, SET_INTERVIEW } from 'reducers/application';
 
 describe("Application Reducer", () => {
   it("thows an error with an unsupported type", () => {

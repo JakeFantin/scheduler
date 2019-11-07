@@ -88,7 +88,7 @@ export default {
       statusText: "No Content"
     });
   }),
-// DELETE REQUEST MOCK, RETURNS SUCCESS
+  // DELETE REQUEST MOCK, RETURNS SUCCESS
   delete: jest.fn(url => {
     return Promise.resolve({
       status: 204,
