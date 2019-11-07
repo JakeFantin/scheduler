@@ -1,3 +1,6 @@
+// SELECTOR FUNCTION PATTERN FILE
+
+// RETURNS AN ARRAY OF APPOINTMENTS FOR A SPECIFIED DAY GIVEN THE STATE
 export function getAppointmentsForDay(state, day) {
   let currentAppointments = [];
   let currentDay = null;
@@ -16,7 +19,7 @@ export function getAppointmentsForDay(state, day) {
 
   return currentAppointments;
 }
-
+// RETURNS A SPECIFIED INTERVIEW FILLED IN THE CORRECT INTERVIEW INSTEAD OF A NUMBER
 export function getInterview(state, interview) {
   if (interview) {
     return { ...interview, interviewer: state.interviewers[interview.interviewer] };
@@ -24,7 +27,7 @@ export function getInterview(state, interview) {
     return null;
   }
 }
-
+// RETURNS AN ARRAY OF INTERVIEWS FROM A SPECIFIED DAY GIVEN THE STATE
 export function getInterviewersForDay(state, day) {
   let currentInterviewers = [];
   let currentDay = null;

@@ -1,3 +1,5 @@
+// MOCK FILE FOR THE AXIOS LIBRARY
+// MOCK DATA TO RETURN ON GET REQUEST
 const fixtures = {
   days: [
     {
@@ -53,7 +55,9 @@ const fixtures = {
   }
 };
 
+// DEFAULT FUNCTION EXPORT
 export default {
+  // GET METHOD
   get: jest.fn(url => {
     if (url === "/api/days") {
       return Promise.resolve({
@@ -62,7 +66,6 @@ export default {
         data: fixtures.days
       });
     }
-
     if (url === "/api/appointments") {
       return Promise.resolve({
         status: 200,
@@ -70,7 +73,6 @@ export default {
         data: fixtures.appointments
       });
     }
-
     if (url === "/api/interviewers") {
       return Promise.resolve({
         status: 200,
@@ -79,14 +81,14 @@ export default {
       });
     }
   }),
-
+  // PUT REQUEST MOCK, RETURNS SUCCESS
   put: jest.fn(url => {
     return Promise.resolve({
       status: 204,
       statusText: "No Content"
     });
   }),
-
+// DELETE REQUEST MOCK, RETURNS SUCCESS
   delete: jest.fn(url => {
     return Promise.resolve({
       status: 204,

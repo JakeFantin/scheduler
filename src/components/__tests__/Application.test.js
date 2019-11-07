@@ -1,3 +1,4 @@
+// FILE FOR INTERGRATION TESTS 
 import React from "react";
 import axios from 'axios';
 import { render, cleanup, waitForElement, getByText, prettyDOM, getAllByTestId, getByAltText, getByPlaceholderText, queryByText, queryAllByText, waitForElementToBeRemoved } from "@testing-library/react";

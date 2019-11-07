@@ -1,3 +1,4 @@
+// STATUS COMPONENT FILE (TAKES IN A MESSAGE SUCH AS 'SAVING' OR 'DELETING')
 import React from 'react';
 import 'components/Appointment/styles.scss';
 

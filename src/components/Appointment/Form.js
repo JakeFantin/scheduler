@@ -1,23 +1,31 @@
+// FORM COMPONENT FILE
 import React, { useState } from 'react';
 import 'components/Appointment/styles.scss';
 
 import InterviewerList from 'components/InterviewerList';
 import Button from 'components/Button';
 
+
 export default function Form(props) {
+
+  // NUMBER OF STATES USED FOR THE FOR INPUTS AND THE ERROR MESSAGE
+  // IN EDIT, NAME AND INTERVIEWER ALREADY SET, IN CREATE THEY ARE NOT
   const [name, setName] = useState(props.name || '');
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
   const [error, setError] = useState('');
 
+  // RESETS INPUTS IF NOT SELECTED
   const reset = function() {
     setName('');
     setInterviewer(null);
   }
+  // ON CANCEL FUNCTION THAT CLOSES THE FORM
   const cancel = function() {
     reset();
     props.onCancel();
   }
 
+  // ERROR CHECKING FOR EMPTY INPUT
   function validate() {
     if (name === '') {
       setError("Student name cannot be blank");

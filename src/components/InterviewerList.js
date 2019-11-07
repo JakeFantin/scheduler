@@ -1,8 +1,10 @@
+// INTERVIEWER LIST COMPONENT 
 import React from 'react';
 import PropTypes from 'prop-types';
 import InterviewerListItem from 'components/InterviewerListItem';
 import 'components/InterviewerList.scss';
 
+// PROP REQUIREMENTS
 InterviewerList.propTypes = {
   interviewer: PropTypes.number,
   setInterviewer: PropTypes.func.isRequired
@@ -10,6 +12,7 @@ InterviewerList.propTypes = {
 
 export default function InterviewerList(props) {
 
+  // CREATES THE INTERVIEWER LIST ITEMS BASED ON THE DAYS' AVAILABLE INTERVIEWERS
   const interviewers = props.interviewers.map(interviewer => {
     return (
       <InterviewerListItem

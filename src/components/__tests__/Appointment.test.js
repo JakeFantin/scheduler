@@ -1,3 +1,4 @@
+// TEST FILE FOR APPOINTMENT COMPONENT, ONLY HAS RENDER TEST AS MOST FUNCTIONALITY IS TESTED IN THE INTEGRATION TESTS
 import React from "react";
 
 import { render, cleanup } from "@testing-library/react";

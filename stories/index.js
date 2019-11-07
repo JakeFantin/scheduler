@@ -1,3 +1,4 @@
+// STORY FILE, VISUAL TESTS OF COMPONENTS IN ISOLATION GIVEN DIFFERENT PROPS
 import React, { Fragment } from "react";
 
 import { storiesOf } from "@storybook/react";
@@ -46,6 +47,7 @@ storiesOf("DayListItem", module) //Initiates Storybook and registers our DayList
   <DayListItem name="Tuesday" setDay={action("setDay")} spots={5} /> // action() allows us to create a callback that appears in the actions panel when clicked
 ));
 
+// MOCK DAYS ARRAY
 const days = [
   {
     id: 1,
@@ -75,6 +77,7 @@ storiesOf("DayList", module)
     <DayList days={days} day={"Tuesday"} setDay={action("setDay")} />
   ));
 
+// MOCK INTERVIEWER OBJECT
 const interviewer = {
   id: 1,
   name: "Sylvia Palmer",
@@ -109,6 +112,7 @@ storiesOf("InterviewerListItem", module)
     />
   ));
 
+// MOCK INTERVIEWERS ARRAY
 const interviewers = [
   { id: 1, name: "Sylvia Palmer", avatar: "https://i.imgur.com/LpaY82x.png" },
   { id: 2, name: "Tori Malcolm", avatar: "https://i.imgur.com/Nmx0Qxo.png" },

@@ -1,5 +1,7 @@
+// TEST FILE FOR SELECTORS
 import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "helpers/selectors";
 
+// MOCK STATE
 const state = {
   days: [
     {
@@ -71,7 +73,6 @@ test("getAppointmentsForDay returns an empty array when the day is not found", (
   expect(result.length).toEqual(0);
 });
 
-  //getInterviewersForDay//
 test("getInterviewersForDay returns an array", () => {
   const result = getInterviewersForDay(state, "Monday");
   expect(Array.isArray(result)).toBe(true);

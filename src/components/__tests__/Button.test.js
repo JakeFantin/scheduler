@@ -1,3 +1,4 @@
+// UNIT TEST FILE FOR BUTTON COMPONENT, LEARNING EXAMPLE FOR REACT TESTING
 import React from "react";
 
 import { render, cleanup, fireEvent } from "@testing-library/react";

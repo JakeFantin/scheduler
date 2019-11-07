@@ -1,3 +1,4 @@
+// DAY LIST ITEM COMPONENT TEST FILE, CHECKS SPOTS AND DAY NAME ARE CORRECTLY DISPLAYED
 import React from "react";
 
 import { render, cleanup } from "@testing-library/react";

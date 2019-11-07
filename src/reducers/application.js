@@ -1,3 +1,4 @@
+// REDUCER FILE
 export const SET_DAY = 'SET_DAY';
 export const SET_APPLICATION_DATA = 'SET_APPLICATION_DATA';
 export const SET_INTERVIEW = "SET_INTERVIEW";
@@ -12,9 +13,9 @@ export default function reducer(state, action) {
       return { ...state, days: action.value[0].data, appointments: action.value[1].data, interviewers: action.value[2].data }
     // MAKE OR DELETE AN INTERVIEW
     case SET_INTERVIEW: {
-      // IF STATEMENT DETERMINES THE DAY BY THE APPOINTMENT ID
       let dayId = Math.floor((action.id/5)-.01);
 
+      // DETERMINES THE NUMBER OF SPOTS STILL
       const numSpots = action.newState.days[dayId].appointments.reduce((count, appointment) => {
         return !action.newState.appointments[appointment].interview ? count + 1 : count;
       }, 0);

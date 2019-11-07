@@ -1,3 +1,4 @@
+// CYPRESS TEST FILE FOR NAVIGATION FUNCTIONALITY
 describe("navigation", () => {
   it('should visit root', () => {
     cy.visit('/');

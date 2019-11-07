@@ -1,5 +1,5 @@
+// TOP LEVEL COMPONENT - APPLICATION FILE
 import React from "react";
-
 import "components/Application.scss";
 import DayList from "./DayList";
 import Appointment from 'components/Appointment';

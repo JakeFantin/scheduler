@@ -1,3 +1,4 @@
+// JEST TEST FILE FOR USE VISUAL MODE HOOK
 import { renderHook, act } from "@testing-library/react-hooks";
 
 import useVisualMode from "hooks/useVisualMode";

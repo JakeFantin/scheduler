@@ -1,3 +1,4 @@
+// TEST FOR FOR THE FORM, USING JEST
 import React from "react";
 
 import { render, cleanup, fireEvent} from "@testing-library/react";
@@ -15,7 +16,7 @@ describe('Form', () => {
     }
   ];
 
-  it('renders without student name not provided', () => {
+  it('renders without student name provided', () => {
     const { getByPlaceholderText } = render(
       <Form interviewers={interviewers} />
     ); 

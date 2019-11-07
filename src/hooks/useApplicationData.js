@@ -5,6 +5,7 @@ import reducer, {SET_DAY, SET_APPLICATION_DATA, SET_INTERVIEW} from 'reducers/ap
 // EXPORT FUNCTION THAT GIVES THE APPLICATION ACCESS TO THE STATE
 export default function useApplicationData() {
 
+  // GET REDUCER FUNCTIONS
   const [state, dispatch] = useReducer(reducer, { day: 'Monday', days: [], appointments: {}, interviewers: {} })
 
   // SET DAY FUNCTION FOR CHOOSING A DAY IN THE NAV BAR
@@ -56,6 +57,7 @@ export default function useApplicationData() {
       .then(() => dispatch({ type: SET_INTERVIEW, newState, id }));
   };
 
+  // RETURN HOOK FUNCTIONS TO COMPONENTS
   return {
     state,
     setDay,

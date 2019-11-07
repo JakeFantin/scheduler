@@ -1,3 +1,4 @@
+// ROOT FILE FOR APP, RENDERS THE TOP LEVEL COMPONENT
 import React from "react";
 import ReactDOM from "react-dom";
 
