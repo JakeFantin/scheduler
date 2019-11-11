@@ -21,3 +21,26 @@ npm test
 ```sh
 npm run storybook
 ```
+## Dependencies
+
+-axios
+-@testing-library/react-hooks
+-react-test-renderer
+
+## Screenshots
+
+
+![Initial view, with interviews already in the database.](https://github.com/JakeFantin/scheduler/blob/master/docs/main.png?raw=true)
+Initial view, with interviews already in the database.
+
+![Options for booked interviews revealed on hover.](https://github.com/JakeFantin/scheduler/blob/master/docs/hover.png?raw=true)
+Options for booked interviews revealed on hover.
+
+![Edit button allows the user to change their name or choose a new interviewer.](https://github.com/JakeFantin/scheduler/blob/master/docs/edit.png?raw=true)
+Edit button allows the user to change their name or choose a new interviewer.
+
+![Attempting to delete a booked interview requires confirmation.](https://github.com/JakeFantin/scheduler/blob/master/docs/delete.png?raw=true)
+Attempting to delete a booked interview requires confirmation.
+
+![Clicking on a plus button gives the option to create a new interview. Requires a name.](https://github.com/JakeFantin/scheduler/blob/master/docs/create.png?raw=true)
+Clicking on a plus button gives the option to create a new interview. Requires a name.
