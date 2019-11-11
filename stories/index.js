@@ -8,17 +8,17 @@ import "index.scss";
 
 import Button from "components/Button";
 import DayListItem from "components/DayListItem";
-import DayList from 'components/DayList';
-import InterviewerListItem from 'components/InterviewerListItem';
-import InterviewerList from 'components/InterviewerList';
+import DayList from "components/DayList";
+import InterviewerListItem from "components/InterviewerListItem";
+import InterviewerList from "components/InterviewerList";
 import Appointment from "components/Appointment/index";
-import Header from 'components/Appointment/Header';
-import Empty from 'components/Appointment/Empty';
-import Show from 'components/Appointment/Show';
-import Confirm from 'components/Appointment/Confirm';
-import Status from 'components/Appointment/Status';
-import Error from 'components/Appointment/Error';
-import Form from 'components/Appointment/Form';
+import Header from "components/Appointment/Header";
+import Empty from "components/Appointment/Empty";
+import Show from "components/Appointment/Show";
+import Confirm from "components/Appointment/Confirm";
+import Status from "components/Appointment/Status";
+import Error from "components/Appointment/Error";
+import Form from "components/Appointment/Form";
 
 storiesOf("Button", module)
   .addParameters({
@@ -52,23 +52,23 @@ const days = [
   {
     id: 1,
     name: "Monday",
-    spots: 2,
+    spots: 2
   },
   {
     id: 2,
     name: "Tuesday",
-    spots: 5,
+    spots: 5
   },
   {
     id: 3,
     name: "Wednesday",
-    spots: 0,
-  },
+    spots: 0
+  }
 ];
 
 storiesOf("DayList", module)
   .addParameters({
-    backgrounds: [{ name: "dark", value: "#222f3e", default: true }],
+    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   })
   .add("Monday", () => (
     <DayList days={days} day={"Monday"} setDay={action("setDay")} />
@@ -143,65 +143,46 @@ storiesOf("Appointment", module)
   .addParameters({
     backgrounds: [{ name: "white", value: "#fff", default: true }]
   })
-  .add("Appointment", () => (
-    <Appointment
-    />
-  ))
-  .add("Appointment with Time", () => (
-    <Appointment
-      time={'12pm'}
-    />
-  ))
-  .add("Header", () => (
-    <Header
-      time={'12pm'}
-    />
-  ))
-  .add('Empty', () => (
-    <Empty
-      onAdd={action("onAdd")}
-    />
-  ))
-  .add('Show', () => (
+  .add("Appointment", () => <Appointment />)
+  .add("Appointment with Time", () => <Appointment time={"12pm"} />)
+  .add("Header", () => <Header time={"12pm"} />)
+  .add("Empty", () => <Empty onAdd={action("onAdd")} />)
+  .add("Show", () => (
     <Show
-      student={'Lydia Miller-Jones'}
+      student={"Lydia Miller-Jones"}
       interviewer={interviewer}
       onEdit={action("onEdit")}
       onDelete={action("onDelete")}
     />
   ))
-  .add('Confirm', () => (
+  .add("Confirm", () => (
     <Confirm
-      message={'Delete the appointment?'}
+      message={"Delete the appointment?"}
       onConfirm={action("onConfirm")}
       onCancel={action("onCancel")}
     />
   ))
-  .add('Status', () => (
-    <Status
-      message={'Deleting'}
-    />
-  ))
-  .add('Error', () => (
+  .add("Status", () => <Status message={"Deleting"} />)
+  .add("Error", () => (
     <Error
-      message={'Could not delete appointment.'}
-      onClose={action('onClose')}
+      message={"Could not delete appointment."}
+      onClose={action("onClose")}
     />
   ))
-  .add('Edit', () => (
+  .add("Edit", () => (
     <Form
-      name={'Lydia'}
+      name={"Lydia"}
       interviewers={interviewers}
       interviewer={3}
-      onSave={action('onSave')}
-      onCancel={action('onCancel')}
+      onSave={action("onSave")}
+      onCancel={action("onCancel")}
     />
   ))
-  .add('Create', () => (
+  .add("Create", () => (
     <Form
       interviewers={interviewers}
-      onSave={action('onSave')}
-      onCancel={action('onCancel')}
+      onSave={action("onSave")}
+      onCancel={action("onCancel")}
     />
   ))
   .add("Appointment Empty", () => (

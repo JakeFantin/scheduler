@@ -22,7 +22,10 @@ export function getAppointmentsForDay(state, day) {
 // RETURNS A SPECIFIED INTERVIEW FILLED IN THE CORRECT INTERVIEW INSTEAD OF A NUMBER
 export function getInterview(state, interview) {
   if (interview) {
-    return { ...interview, interviewer: state.interviewers[interview.interviewer] };
+    return {
+      ...interview,
+      interviewer: state.interviewers[interview.interviewer]
+    };
   } else {
     return null;
   }

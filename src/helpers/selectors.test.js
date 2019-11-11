@@ -1,5 +1,9 @@
 // TEST FILE FOR SELECTORS
-import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "helpers/selectors";
+import {
+  getAppointmentsForDay,
+  getInterview,
+  getInterviewersForDay
+} from "helpers/selectors";
 
 // MOCK STATE
 const state = {
@@ -34,9 +38,9 @@ const state = {
   },
   interviewers: {
     "1": {
-      "id": 1,
-      "name": "Sylvia Palmer",
-      "avatar": "https://i.imgur.com/LpaY82x.png"
+      id: 1,
+      name: "Sylvia Palmer",
+      avatar: "https://i.imgur.com/LpaY82x.png"
     },
     "2": {
       id: 2,
@@ -44,7 +48,6 @@ const state = {
       avatar: "https://i.imgur.com/Nmx0Qxo.png"
     }
   }
-
 };
 
 test("getAppointmentsForDay returns an array", () => {
